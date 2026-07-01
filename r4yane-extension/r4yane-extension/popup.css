@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -16,13 +15,11 @@ body {
   overflow: hidden;
 }
 
-/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #52525b; }
 
-/* ===== CONTAINER ===== */
 .container {
   display: flex;
   flex-direction: column;
@@ -31,7 +28,6 @@ body {
   overflow: hidden;
 }
 
-/* ===== HEADER ===== */
 .header {
   display: flex;
   align-items: center;
@@ -73,7 +69,6 @@ body {
   border: 1px solid #7c3aed33;
 }
 
-/* ===== DOMAIN BAR ===== */
 .domain-bar {
   display: flex;
   align-items: center;
@@ -108,7 +103,6 @@ body {
   max-width: 260px;
 }
 
-/* ===== TOOLBAR ===== */
 .toolbar {
   display: flex;
   gap: 8px;
@@ -169,7 +163,6 @@ body {
   border-color: #7c3aed;
 }
 
-/* ===== BULK ACTIONS ===== */
 .bulk-actions {
   display: flex;
   gap: 6px;
@@ -177,7 +170,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* ===== BUTTONS ===== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -249,14 +241,12 @@ body {
   color: #c4b5fd;
 }
 
-/* ===== COOKIE LIST ===== */
 .cookie-list {
   flex: 1;
   overflow-y: auto;
   padding: 0 10px 6px;
 }
 
-/* ===== COOKIE ITEM ===== */
 .cookie-item {
   display: flex;
   align-items: flex-start;
@@ -296,7 +286,6 @@ body {
   100% { opacity: 0; transform: translateX(20px); height: 0; padding: 0; margin: 0; border: 0; overflow: hidden; }
 }
 
-/* Checkbox */
 .cookie-check {
   flex-shrink: 0;
   margin-top: 2px;
@@ -327,7 +316,7 @@ body {
   transform: rotate(45deg);
 }
 
-/* Cookie Body */
+
 .cookie-body {
   flex: 1;
   min-width: 0;
@@ -387,7 +376,6 @@ body {
   color: #fb923c;
 }
 
-/* Cookie Delete Button */
 .cookie-delete {
   flex-shrink: 0;
   width: 26px;
@@ -409,7 +397,6 @@ body {
   color: #f87171;
 }
 
-/* ===== EMPTY STATE ===== */
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -425,7 +412,6 @@ body {
   color: #52525b;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   display: flex;
   align-items: center;
@@ -450,7 +436,6 @@ body {
   color: #27272a;
 }
 
-/* ===== TOAST ===== */
 .toast {
   position: fixed;
   bottom: 50px;
@@ -479,7 +464,6 @@ body {
   opacity: 0;
 }
 
-/* ===== CONFIRM DIALOG ===== */
 .confirm-overlay {
   position: fixed;
   inset: 0;
