@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>r4yane extension</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <img src="icons/icon48.png" alt="R4" class="logo" />
+        <h1>r4yane extension</h1>
+      </div>
+      <span id="cookieCount" class="badge">0</span>
+    </header>
+
+    <!-- Domain Info Bar -->
+    <div class="domain-bar">
+      <div class="domain-info">
+        <span class="domain-label">Current Site</span>
+        <span id="currentDomain" class="domain-name">Loading...</span>
+      </div>
+      <button id="refreshBtn" class="btn-icon" title="Refresh cookies">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg>
+      </button>
+    </div>
+
+    <!-- Search & Filter -->
+    <div class="toolbar">
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" placeholder="Search cookies..." />
+      </div>
+      <select id="filterSelect" class="filter-select">
+        <option value="all">All Cookies</option>
+        <option value="session">Session Only</option>
+        <option value="persistent">Persistent</option>
+        <option value="httpOnly">HttpOnly</option>
+        <option value="secure">Secure</option>
+      </select>
+    </div>
+
+    <!-- Bulk Actions -->
+    <div class="bulk-actions">
+      <button id="selectAllBtn" class="btn btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Select All
+      </button>
+      <button id="deleteSelectedBtn" class="btn btn-sm btn-danger" disabled>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Delete Selected
+      </button>
+      <button id="deleteAllBtn" class="btn btn-sm btn-danger">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Delete All
+      </button>
+    </div>
+
+    <!-- Cookie List -->
+    <div id="cookieList" class="cookie-list">
+      <div class="empty-state" id="emptyState">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <p>No cookies found for this site</p>
+      </div>
+    </div>
+
+    <!-- Footer Stats -->
+    <footer class="footer">
+      <div class="stats">
+        <span id="totalStat"><strong>0</strong> total</span>
+        <span class="divider">|</span>
+        <span id="sessionStat"><strong>0</strong> session</span>
+        <span class="divider">|</span>
+        <span id="secureStat"><strong>0</strong> secure</span>
+      </div>
+      <div class="footer-actions">
+        <button id="exportBtn" class="btn-link" title="Export cookies as JSON">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
